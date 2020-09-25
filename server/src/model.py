@@ -1,4 +1,4 @@
-import config
+from config import config
 import torch
 import torch.nn as nn
 import transformers

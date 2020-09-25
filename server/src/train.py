@@ -7,10 +7,10 @@ import torch
 from sklearn import preprocessing
 from sklearn import model_selection
 
-#from transformers import AdamW
-#from transformers import get_linear_schedule_with_warmup
+from transformers import AdamW
+from transformers import get_linear_schedule_with_warmup
 
-import config
+from config import config
 import dataset
 import utils
 from model import EntityModel
@@ -100,9 +100,9 @@ if __name__ == "__main__":
 
     best_loss = np.inf
     for epoch in range(config.EPOCHS):
-        train_loss = engine.train_fn(
+        train_loss = utils.train_fn(
             train_data_loader, model, optimizer, device, scheduler)
-        test_loss = engine.eval_fn(valid_data_loader, model, device)
+        test_loss = utils.eval_fn(valid_data_loader, model, device)
         print(f"Train Loss = {train_loss} Valid Loss = {test_loss}")
         if test_loss < best_loss:
             torch.save(model.state_dict(), config.MODEL_PATH)
