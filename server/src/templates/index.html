@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Auto-Tagger</title>
+    
+</head>
+    <body>
+        <main>
+            <h1>
+                Auto Tagger
+            </h1>
+
+            <form id="NER_request" action="{{ url_for('predict') }}" method="post">
+                <textarea id="ner_text" name="ner_text" value="" cols="90" rows="20">{{ sentence }}</textarea>
+                <br>
+                <input id="submit_button" type="submit" value="Analyze!">
+            </form>
+
+            {% if word_range >= 0 %}
+                <div id="display_area">
+                    {% for word in range(word_range) %}
+                        {%- if words[word].lower() in tokens -%}
+                            <strong class="token" id="{{ words[word] }}-{{ word }}">{{words[word]}}</strong>
+                        {%- else -%}
+                            {{words[word]}} 
+                        {%- endif -%}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </main>
+    </body>
+    
+    <script type="module">
+        import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+
+        window.onload = function Annotate() {
+            const config_box = { type: 'box', color: 'orange' };
+            const config_highlight = { type: 'highlight', color: 'yellow', iterations: 1, multiline: true };
+
+            var arr = [];
+            arr.push(annotate(document.querySelector('h1'), config_box));
+
+            var elements = document.getElementsByClassName("token");
+            for(var i=0; i<elements.length; i++) {
+                arr.push(annotate(document.querySelector("#"+elements[i].id), config_box));
+            }
+
+            const ag = annotationGroup(arr);
+            ag.show();
+        }
+
+    </script>
+</html>
