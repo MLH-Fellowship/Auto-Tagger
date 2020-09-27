@@ -27,7 +27,7 @@ num_pos = len(list(enc_pos.classes_))
 num_tag = len(list(enc_tag.classes_))
 
 
-@bentoml.env(pip_packages=['torch', 'numpy', 'torchvision', 'scikit-learn'])
+@bentoml.env(infer_pip_packages=True)
 @bentoml.artifacts([PytorchModelArtifact('ner')])
 class PyTorchModel(bentoml.BentoService):
     
@@ -54,7 +54,7 @@ class PyTorchModel(bentoml.BentoService):
             tags=[[0] * len(sentence)]
         )
 
-        device = torch.device("cuda")
+        device = torch.device("cpu")
 
         with torch.no_grad():
             data = test_dataset[0]
@@ -91,9 +91,9 @@ class PyTorchModel(bentoml.BentoService):
 if __name__ == "__main__":
 
 
-    device = torch.device("cuda")
+    device = torch.device("cpu")
     model = EntityModel(num_tag=num_tag, num_pos=num_pos)
-    model.load_state_dict(torch.load(config.MODEL_PATH))
+    model.load_state_dict(torch.load(config.MODEL_PATH, map_location='cpu'))
     model.to(device)
 
     # 2) `pack` it with required artifacts
