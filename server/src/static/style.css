@@ -13,3 +13,28 @@ body {
 h1 {
     display: inline-block;
 }
+
+textarea {
+    font-size: 16px;
+}
+
+input {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 7px #999;
+  }
+  
+input:hover {background-color: rgb(202, 131, 0)}
+  
+input:active {
+    background-color: rgb(202, 131, 0);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
