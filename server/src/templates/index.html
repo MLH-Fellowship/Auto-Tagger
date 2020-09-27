@@ -18,7 +18,7 @@
             <form id="NER_request" action="{{ url_for('predict') }}" method="post">
                 <textarea id="ner_text" name="ner_text" value="" cols="75" rows="15">{{ sentence }}</textarea>
                 <br>
-                <input id="submit_button" type="submit" value="Analyze!" onclick="this.value='Analyzing...'">
+                <input id="submit_button" type="submit" value="Auto-Tag!" onclick="this.value='Tagging...'">
             </form>
 
             <br>
