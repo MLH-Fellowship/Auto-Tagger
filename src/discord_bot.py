@@ -52,10 +52,14 @@ async def on_message(message):
         all_words = list(itertools.chain(*list(itertools.chain(*all_words))))
         
         member_names = {(member.nick.lower()): member.id for member in guild_obj.ids if member.nick is not None}
+        name_split = [{name: member_names[member] for name in member.split()} for member in member_names]
+        name_ids = {key: value for data in name_split for key, value in data.items()}
+
         for i in range(len(all_words)):
-            if all_words[i].lower() in list(member_names.keys()):
-                print("Here!")
-                all_words[i] = "<@"+str(member_names[all_words[i].lower()])+">"
+            if all_words[i].lower() in tokens:
+                member_id = str(name_ids[all_words[i].lower()])
+                # print("Here!")
+                all_words[i] = "<@"+member_id+">"
 
         # For Debugging
         # print(prediction, member_names)
