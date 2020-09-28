@@ -57,18 +57,17 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
 
 ### Setup
 
-- In order to install all packages follow the steps below:
-
+In order to install all packages follow the steps below:
 
 1. Download the model from this drive: https://drive.google.com/file/d/1TyuIoMO42CHHvQVlOpw6Ynco39rQbc6t/view?usp=sharing
 
-2. Put it in the server/results/model.bin ( rename the file as model.bin )
+2. Put it in the `server/results/model.bin` ( rename the file as `model.bin` )
 
 3. Download the BERT uncased model from here: https://www.kaggle.com/abhishek/bert-base-uncased
 
 4. Unzip the files in server/model
 
-5. Run `python serving.py` inside server/src
+5. Run `python serving.py` inside `server/src`
 
 6. Execute the command `bentoml serve PyTorchModel:latest`
 
@@ -80,9 +79,10 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
 To send a request you'd need to send in a POST request:
 
 ```bash
-curl -X POST "http://127.0.0.1:5000/predict" \
-     -H "accept: */*" -H "Content-Type: application/json" \
-     -d "{\"sentence\":\"An example sentence.\"}"
+curl -i --header "Content-Type: application/json" \
+        --request POST \
+        --data '{"sentence": "John used to play for The Beatles"}' \
+        http://127.0.0.1:5000/predict
 ```
 
 Example:
@@ -103,6 +103,19 @@ The response will be a string of all the names detected separated by a ','. In t
 
 -------
 
+## Using with Flask
+Follow these steps after step 5 in **Setup** (in `/src/` directory):
+
+```bash
+export FLASK_APP=front.py
+export FLASK_DEBUG=1 # For debugging
+flask run
+```
+
+-------
+
+## Creating and running a Docker image and deploying it on Heroku
+This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki) of this repository.
 
 ## Data
 We used an Annotated Corpus for Named Entity Recognition dataset, that we found on kaggle: https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus
@@ -113,13 +126,13 @@ This dataset contains 47958 sentences with 948241 words.
 
 -------
 ## Training a new model
-You can train your own model by using the train.py script.
-Change the config.py file with the parameters you want and then execute the following command:
+You can train your own model by using the `train.py` script.
+Change the `config.py` file with the parameters you want and then execute the following command:
 
 ```bash
 python train.py
 ```
-This will generate your model file in config.MODEL_PATH as "model.bin".
+This will generate your model file in `config.MODEL_PATH` as `model.bin`.
 
 -------
 
