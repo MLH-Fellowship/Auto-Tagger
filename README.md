@@ -21,8 +21,10 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
 
 <p align="center">
   <a href="#Key-Features">Key Features</a> •
-  <a href="#installation">How To Use</a> •
+  <a href="#installation">Installation</a> •
   <a href="#calling-the-api">Calling the API</a> •
+  <a href="#using-flask">Using Flask</a> •
+  <a href="#creating-and-running-a-docker-image-and-deploying-it-on-heroku">Docker image</a> •
   <a href="#data">Data</a> •
   <a href="#training-a-new-model">Training a new model</a> •
   <a href="#contributing">Contributing</a>
@@ -105,7 +107,7 @@ The response will be a string of all the names detected separated by a ','. In t
 
 -------
 
-## Using with Flask
+## Using Flask
 Follow these steps after step 5 in **Setup** (in `/src/` directory):
 
 ```bash
