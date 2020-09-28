@@ -12,14 +12,15 @@
 [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/pulls)
 
-<h4 align="left">An Artificial Intelligence tool that uses Transformer models and NER ( Named Entity Recognition ) techniques to detect proper names in a sentence. <br><br>
+<h4 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a sentence. <br><br>
 We also used BentoML to serve the model and use it with a Flask API on our Web App.</h4>
 
 <br><br><br><br><br><br>
 
-<div align="center">
+<span align="center">
   <h2>Auto-Tagger Repo</h2>
-</div>
+</span>
+
 <p align="center">
   <a href="#Key-Features">Key Features</a> •
   <a href="#installation">How To Use</a> •
@@ -29,21 +30,24 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
   <a href="#contributing">Contributing</a>
 </p>
 
-<div align="center">
-<img src=https://i.imgur.com/7wWrjNS.gif" >
-</div>
+<p align="center">
+<img src="https://i.imgur.com/7wWrjNS.gif" >
+</p>
 
-
+## Our Discord Bot
+<p align="center">
+<img src="https://i.imgur.com/tdKFxwr.gif" >
+</p>
 
 ## Key Features 
 
-- [x] Usage of Transformer models ( BERT in this case ) and NER ( Named Entity Recognition ) techniques.
-- [x] Building a training pipeline.
-- [x] Implementing and training the model ( using Google Colab ).
-- [x] Building an inference pipeline.
-- [x] Serving the model using BentoML.
-- [x] Create a Web App to visualize our task.
-- [ ] Create a Discord bot that implements the Auto-Tagger features.
+* Usage of Transformer models ( BERT in this case ) and NER ( Named Entity Recognition ) techniques.
+* Building a training pipeline.
+* Implementing and training the model ( using Google Colab ).
+* Building an inference pipeline.
+* Serving the model using BentoML.
+* Create a Web App to visualize our task.
+* Create a Discord bot that implements the Auto-Tagger features.
 
 -------
 
@@ -61,13 +65,13 @@ In order to install all packages follow the steps below:
 
 1. Download the model from this drive: https://drive.google.com/file/d/1TyuIoMO42CHHvQVlOpw6Ynco39rQbc6t/view?usp=sharing
 
-2. Put it in the `server/results/model.bin` ( rename the file as `model.bin` )
+2. Put it in the `/results/model.bin` ( rename the file as `model.bin` )
 
 3. Download the BERT uncased model from here: https://www.kaggle.com/abhishek/bert-base-uncased
 
-4. Unzip the files in server/model
+4. Unzip the files in `/model/`
 
-5. Run `python serving.py` inside `server/src`
+5. Run `python serving.py` inside `/src/`
 
 6. Execute the command `bentoml serve PyTorchModel:latest`
 
