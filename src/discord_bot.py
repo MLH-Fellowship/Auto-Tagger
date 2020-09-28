@@ -27,6 +27,13 @@ class Guild_Members:
 
 guild_obj = Guild_Members()
 
+def preprocess_content(content):
+    keywords = ["Mr.", "Mrs.", "Dr.", "Mst.", "Madam", "Sir", "Dear"]
+    for keyword in keywords:
+        content = content.replace(keyword, "")
+        content = content.replace(keyword.lower(), "")
+    return content
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -45,7 +52,8 @@ async def on_message(message):
     print(message.content)
     if message.content.startswith('$tag'):
         content = message.content.replace("$tag", "")
-        prediction = guild_obj.bento_service.predict([{"sentence": content}])
+        bento_content = preprocess_content(content)
+        prediction = guild_obj.bento_service.predict([{"sentence": bento_content}])
 
         tokens = prediction[0].split(",")
         all_words = [[word_tokenize(w), ' '] for w in content.split()]
