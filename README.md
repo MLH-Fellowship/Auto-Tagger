@@ -121,6 +121,8 @@ flask run
 ## Creating and running a Docker image and deploying it on Heroku
 This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki) of this repository.
 
+-------
+
 ## Data
 We used an Annotated Corpus for Named Entity Recognition dataset, that we found on kaggle: https://www.kaggle.com/abhinavwalia95/entity-annotated-corpus
 
