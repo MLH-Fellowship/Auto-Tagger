@@ -17,9 +17,7 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
 
 <br><br><br><br><br><br>
 
-<span align="center">
-  <h2>Auto-Tagger Repo</h2>
-</span>
+<h2 align="center">Auto-Tagger Repo</h2>
 
 <p align="center">
   <a href="#Key-Features">Key Features</a> •
