@@ -12,8 +12,8 @@
 [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/pulls)
 
-<h4 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a sentence. <br><br>
-We also used BentoML to serve the model and use it with a Flask API on our Web App.</h4>
+<h5 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a sentence. <br><br>
+We also used BentoML to serve the model and use it with a Flask API on our Web App.</h5>
 
 <br><br><br><br><br><br>
 
