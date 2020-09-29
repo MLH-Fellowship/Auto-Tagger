@@ -1,8 +1,6 @@
 <h1 align="left">
   <br>
- <a href="https://neghlbouh.now.sh/">
     <img src="https://i.imgur.com/llRw5MA.png" align="right" height=400px title="Auto-Tagger" alt="Auto-Tagger Logo">
-</a>
   <br>
   Auto-Tagger
   <br>
