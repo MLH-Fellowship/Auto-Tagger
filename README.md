@@ -15,8 +15,8 @@
 <h4 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a text. <br><br>
 This repo contains:</h4>
 
-* The Auto-Tagger Web App
-* The Auto-Tagger Discord bot
+* **The Auto-Tagger Web App**
+* **The Auto-Tagger Discord bot**
 
 <br><br><br><br><br><br>
 
