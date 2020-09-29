@@ -16,6 +16,8 @@ This repo contains:</h4>
 * **The Auto-Tagger Web App**
 * **The Auto-Tagger Discord bot**
 
+**A video demo can be found here: <a href="https://www.youtube.com/watch?v=3XF4hOLtU1o"> **https://www.youtube.com/watch?v=3XF4hOLtU1o**</a>**
+
 <br><br><br><br><br><br>
 
 <h2 align="center">Auto-Tagger Repo</h2>
