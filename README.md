@@ -120,6 +120,7 @@ export FLASK_APP=front.py
 export FLASK_DEBUG=1 # For debugging
 flask run
 ```
+> Note: Be sure to modify the `LOAD_PATH` variable in `front.py` depending on your bentoml latest model location
 
 -------
 
