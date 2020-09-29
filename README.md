@@ -123,7 +123,12 @@ flask run
 -------
 
 ## Creating and running a Docker image and deploying it on Heroku
-This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki) of this repository.
+This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki/Creating-and-running-a-Docker-image) of this repository.
+
+-------
+
+## Creating and running the discord bot
+Documentation is available at the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki/Running-the-bot-on-Discord) of this repository.
 
 -------
 
@@ -166,4 +171,7 @@ This will generate your model file in `config.MODEL_PATH` as `model.bin`.
 
 - 🔃 Create a new pull request using <a href="https://github.com/MLH-Fellowship/Auto-Tagger/compare/" target="_blank">`https://github.com/MLH-Fellowship/Auto-Tagger/compare/`</a>.
 
----
+-------
+
+## License
+This project is licensed under the [Apache License, Version 2.0](https://github.com/MLH-Fellowship/Auto-Tagger/blob/master/LICENSE).
