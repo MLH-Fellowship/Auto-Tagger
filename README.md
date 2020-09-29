@@ -1,8 +1,6 @@
 <h1 align="left">
   <br>
- <a href="https://neghlbouh.now.sh/">
     <img src="https://i.imgur.com/llRw5MA.png" align="right" height=400px title="Auto-Tagger" alt="Auto-Tagger Logo">
-</a>
   <br>
   Auto-Tagger
   <br>
@@ -17,6 +15,8 @@ This repo contains:</h4>
 
 * **The Auto-Tagger Web App**
 * **The Auto-Tagger Discord bot**
+
+**A video demo can be found here: <a href="https://www.youtube.com/watch?v=3XF4hOLtU1o"> **https://www.youtube.com/watch?v=3XF4hOLtU1o**</a>**
 
 <br><br><br><br><br><br>
 
@@ -120,11 +120,17 @@ export FLASK_APP=front.py
 export FLASK_DEBUG=1 # For debugging
 flask run
 ```
+> Note: Be sure to modify the `LOAD_PATH` variable in `front.py` depending on your bentoml latest model location
 
 -------
 
 ## Creating and running a Docker image and deploying it on Heroku
-This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki) of this repository.
+This sub-section is thoroughly explained in the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki/Creating-and-running-a-Docker-image) of this repository.
+
+-------
+
+## Creating and running the discord bot
+Documentation is available at the [wiki page](https://github.com/MLH-Fellowship/Auto-Tagger/wiki/Running-the-bot-on-Discord) of this repository.
 
 -------
 
@@ -167,4 +173,7 @@ This will generate your model file in `config.MODEL_PATH` as `model.bin`.
 
 - 🔃 Create a new pull request using <a href="https://github.com/MLH-Fellowship/Auto-Tagger/compare/" target="_blank">`https://github.com/MLH-Fellowship/Auto-Tagger/compare/`</a>.
 
----
+-------
+
+## License
+This project is licensed under the [Apache License, Version 2.0](https://github.com/MLH-Fellowship/Auto-Tagger/blob/master/LICENSE).
