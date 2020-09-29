@@ -46,13 +46,13 @@ This repo contains:</h4>
 
 ## Key Features 
 
-* Usage of Transformer models ( BERT in this case ) and NER ( Named Entity Recognition ) techniques.
-* Building a training pipeline.
-* Implementing and training the model ( using Google Colab ).
-* Building an inference pipeline.
-* Serving the model using BentoML.
-* Create a Web App to visualize our task.
-* Create a Discord bot that implements the Auto-Tagger features.
+- [x] Usage of Transformer models ( BERT in this case ) and NER ( Named Entity Recognition ) techniques.
+- [x] Building a training pipeline.
+- [x] Implementing and training the model ( using Google Colab ).
+- [x] Building an inference pipeline.
+- [x] Serving the model using BentoML.
+- [x] Create a Web Application to visualize our Auto-Tagger features.
+- [x] Create a Discord bot that implements the Auto-Tagger features.
 
 -------
 
