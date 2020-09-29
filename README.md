@@ -12,15 +12,18 @@
 [![GitHub Issues](https://img.shields.io/github/issues/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/MLH-Fellowship/Auto-Tagger.svg)](https://github.com/MLH-Fellowship/Auto-Tagger/pulls)
 
-<h5 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a sentence. <br><br>
-We also used BentoML to serve the model and use it with a Flask API on our Web App.</h5>
+<h4 align="left">An Artificial Intelligence tool that uses Transformer models and NER (Named Entity Recognition) techniques to detect proper names in a text. <br><br>
+This repo contains:</h4>
+
+* The Auto-Tagger Web App
+* The Auto-Tagger Discord bot
 
 <br><br><br><br><br><br>
 
 <h2 align="center">Auto-Tagger Repo</h2>
 
 <p align="center">
-  <a href="#Key-Features">Key Features</a> •
+  <a href="#key-features">Key Features</a> •
   <a href="#installation">Installation</a> •
   <a href="#calling-the-api">Calling the API</a> •
   <a href="#using-flask">Using Flask</a> •
@@ -30,11 +33,13 @@ We also used BentoML to serve the model and use it with a Flask API on our Web A
   <a href="#contributing">Contributing</a>
 </p>
 
+<br><br>
+## Our Auto-Tagger Web Application
 <p align="center">
 <img src="https://i.imgur.com/7wWrjNS.gif" >
 </p>
 
-## Our Discord Bot
+## Our Auto-Tagger Discord Bot
 <p align="center">
 <img src="https://i.imgur.com/tdKFxwr.gif" >
 </p>
