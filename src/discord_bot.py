@@ -65,12 +65,15 @@ async def on_message(message):
 
         for i in range(len(all_words)):
             if all_words[i].lower() in tokens:
-                member_id = str(name_ids[all_words[i].lower()])
-                # print("Here!")
-                all_words[i] = "<@"+member_id+">"
+                try:
+                    member_id = str(name_ids[all_words[i].lower()])
+                    # print("Here!")
+                    all_words[i] = "<@"+member_id+">"
+                except:
+                    continue
 
         # For Debugging
-        # print(prediction, member_names)
+        print(tokens)
         # print(all_words)
 
         await message.channel.send("".join(all_words))
